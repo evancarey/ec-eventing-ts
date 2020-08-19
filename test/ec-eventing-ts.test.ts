@@ -4,7 +4,7 @@ import {EcEventingTs} from '../src/EcEventingTs.js';
 import '../src/ec-eventing-ts.js';
 
 describe('EcEventingTs', () => {
-  let element: EcEventingTs;
+  let element: any;
   beforeEach(async () => {
     element = await fixture(html`
       <ec-eventing-ts></ec-eventing-ts>

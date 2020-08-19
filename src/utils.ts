@@ -1,9 +1,10 @@
 export const Requester = (Base) => class extends Base {
-  requesterInstance(key) {
+  requestInstance(key) {
     const event = new CustomEvent('request-instance', {
       detail: {key,instance:null},
       bubbles: true,
-      cancelable: true
+      cancelable: true,
+      composed: true
     });
     this.dispatchEvent(event);
     return event.detail.instance;
@@ -23,6 +24,6 @@ export const Provider = (Base) => class extends Base {
     });
   }
   provideInstance(key, instance) {
-    this._instance.set(key, instance);
+    this._instances.set(key, instance);
   }
 };

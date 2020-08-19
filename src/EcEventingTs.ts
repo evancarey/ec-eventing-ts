@@ -4,7 +4,6 @@ import './ec-wc0/ec-wc0-ts.js';
 import { Provider } from './utils.js';
 
 export class EcEventingTs extends Provider(LitElement) {
-  //export class EcEventingTs extends LitElement {
 
   @property({type: String}) page = 'main';
 
@@ -36,6 +35,7 @@ export class EcEventingTs extends Provider(LitElement) {
 
     main {
       flex-grow: 1;
+      border: 1px solid red;
     }
 
     .logo > svg {
@@ -66,7 +66,7 @@ export class EcEventingTs extends Provider(LitElement) {
     return html`
       <main>
         <div class="logo">${openWcLogo}</div>
-        <h1>My app</h1>
+        <h1>Pseudo DI</h1>
         <ec-wc0-ts></ec-wc0-ts>
       </main>
       <p class="app-footer">
